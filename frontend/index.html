@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>📄 Resume Analyzer</h2>
+
+    <!-- Resume Section -->
+    <div class="section">
+      <label for="resume-input">Resume:</label>
+      <textarea id="resume-input" placeholder="Paste your resume here"></textarea>
+      <div class="row">
+        <button id="upload-resume">Upload Resume File</button>
+        <p class="note">Supported: .txt, .pdf, .docx</p>
+      </div>
+    </div>
+
+    <!-- Job Description Section -->
+    <div class="section">
+      <label for="job-description-input">Job Description:</label>
+      <textarea id="job-description-input" placeholder="Paste the job description here"></textarea>
+      <div class="row">
+        <button id="upload-jd">Upload JD File</button>
+        <p class="note">Supported: .txt, .pdf, .docx</p>
+      </div>
+    </div>
+
+    <!-- Hidden File Inputs -->
+    <input type="file" id="file-upload-resume" class="hidden">
+    <input type="file" id="file-upload-jd" class="hidden">
+
+    <!-- Analyze Button -->
+    <div class="center">
+      <button id="analyze-button">Analyze</button>
+      <div id="loading-indicator" class="hidden">⏳ Analyzing...</div>
+    </div>
+
+    <!-- Feedback Output -->
+    <div id="feedback-output"></div>
+
+    <!-- Custom Alert -->
+    <div id="custom-alert" class="hidden">
+      <span id="alert-message"></span><br>
+      <button class="close-button">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
